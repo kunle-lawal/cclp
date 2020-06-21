@@ -1,0 +1,1196 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Lato:900");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=reset.css.map */
+/* COLOR PALLET */
+/* MEDIA QUERY BREAK POINTS */
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  color: white;
+}
+
+button {
+  font-family: "Quicksand", sans-serif;
+}
+
+.button-input {
+  transition: opacity 0.2s;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+/*Main Font-sizes*/
+/*FONTS*/
+label {
+  font-family: "Quicksand", sans-serif;
+  width: initial !important;
+}
+
+.lato {
+  font-family: "Lato", sans-serif;
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+}
+
+.logo {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+}
+
+h1 {
+  font-size: 45px;
+  line-height: 50px;
+  font-family: "Lato", sans-serif;
+}
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 28.125px;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1257px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 33px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+@media only screen and (max-width: 700px) {
+  h2 {
+    font-size: 24px;
+    line-height: 19px;
+  }
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 35px;
+  font-family: "Quicksand", sans-serif;
+}
+@media only screen and (max-width: 700px) {
+  h3 {
+    font-size: 17.6470588235px;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1257px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
+h4 {
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "Quicksand", sans-serif;
+  color: #222222;
+}
+
+p {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  color: #314455;
+}
+@media only screen and (max-width: 700px) {
+  p {
+    font-size: 14px;
+  }
+}
+
+.display_none {
+  display: none !important;
+}
+
+input {
+  border: initial !important;
+  margin: initial !important;
+}
+input:hover {
+  border: initial !important;
+  box-shadow: initial !important;
+}
+input:active {
+  border: initial !important;
+  box-shadow: initial !important;
+}
+input:focus {
+  border: initial !important;
+  box-shadow: initial !important;
+}
+input:focus-within {
+  border: initial !important;
+  box-shadow: initial !important;
+}
+
+button,
+input[type=submit],
+input[type=reset] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+button:focus,
+input[type=submit]:focus,
+input[type=reset]:focus {
+  background-color: inherit;
+}
+
+.main_page {
+  background-color: #efefef;
+  min-height: 100vh;
+}
+.main_page nav {
+  background-color: #ffffff;
+  box-shadow: 0 3px 4px #efefef;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 700px) {
+  .main_page nav {
+    position: relative;
+  }
+}
+.main_page nav .navItem {
+  color: #222;
+  display: inline-block;
+}
+@media only screen and (max-width: 700px) {
+  .main_page nav .navItem h4 {
+    margin: initial;
+  }
+}
+.main_page nav .navItem h4 span {
+  background-color: #c95050;
+}
+.main_page nav .logo {
+  margin-left: 50px;
+}
+.main_page nav .studentInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 700px) {
+  .main_page nav .studentInfo {
+    background-color: #c95050;
+    position: absolute;
+    top: 100%;
+    margin: auto;
+    padding: 10px 0;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .main_page nav .studentInfo h4 {
+    color: white;
+    font-size: 15px;
+  }
+}
+.main_page nav .studentInfo h4 span .firstName {
+  text-transform: capitalize;
+}
+.main_page nav .studentInfo h4 span .lastName {
+  text-transform: capitalize;
+}
+.main_page nav .studentInfo .logout {
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 10px;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_page nav .studentInfo .logout:hover * {
+  color: #c95050;
+}
+@media only screen and (max-width: 700px) {
+  .main_page nav .studentInfo .logout {
+    padding: 5px 5px;
+  }
+}
+.main_page nav .studentInfo .logout * {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #222;
+}
+@media only screen and (max-width: 700px) {
+  .main_page nav .studentInfo .logout * {
+    color: white;
+    font-size: 15px;
+  }
+}
+.main_page nav .studentInfo .logout i {
+  height: initial;
+}
+.main_page .testContainer {
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+  padding: 50px;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .testContainer {
+    width: 100%;
+    padding: 20px;
+  }
+}
+.main_page .testContainer .testInfoContainer {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .testContainer .testInfoContainer {
+    width: 90%;
+  }
+}
+.main_page .testContainer .testInfoContainer .testInfo {
+  margin: 15px 0;
+  font-family: "Open Sans", sans-serif;
+}
+.main_page .testContainer .title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 600;
+  color: #c95050;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .testContainer .title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .main_page .testContainer .testTheme {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+.main_page .testContainer .testContent {
+  overflow: hidden;
+  max-width: 796.86px;
+  margin: auto;
+}
+.main_page .testContainer .testContent .topic {
+  margin-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+.main_page .testContainer .testContent .theTest .testQuestions {
+  margin-top: 50px;
+}
+.main_page .testContainer .testContent .theTest .testQuestions .question {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .testContainer .testContent .theTest .testQuestions .question {
+    display: block;
+  }
+}
+.main_page .testContainer .testContent .theTest .testQuestions .question h4 {
+  font-size: 20px;
+  font-weight: 900;
+  margin: 10px 0;
+  background: white;
+  width: 100%;
+  padding: 15px;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .testContainer .testContent .theTest .testQuestions .question h4 {
+    font-size: 15px;
+  }
+}
+.main_page .testContainer .testContent .theTest .testQuestions .question span {
+  font-size: 15px;
+  margin-right: 10px;
+  display: flex;
+}
+.main_page .testContainer .testContent .theTest .testQuestions .question span h4 {
+  background-color: #222;
+  color: white;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .testContainer .testContent .theTest .testQuestions .question span h4 {
+    width: 40px;
+  }
+}
+.main_page .testContainer .testContent .theTest .testQuestions .answers {
+  display: block;
+}
+.main_page .testContainer .testContent .theTest .testQuestions .answers .answer {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .testContainer .testContent .theTest .testQuestions .answers .answer {
+    width: 95%;
+    padding: 10px;
+  }
+}
+.main_page .testContainer .testContent .theTest .testQuestions .answers li {
+  min-width: 300px;
+  margin: 20px 0;
+  padding: 12px;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  background-color: #efefef;
+  color: #222;
+  cursor: pointer;
+}
+.main_page .testContainer .testContent .theTest .testQuestions .answers li span {
+  cursor: pointer;
+}
+.main_page .testContainer .testContent .theTest .testQuestions .answers li .option_button {
+  background-color: white;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .testContainer .testContent .theTest .testQuestions .answers li .option_button {
+    display: none;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1257px) {
+  .main_page .testContainer .testContent .theTest .testQuestions .answers li:hover .answer {
+    border: 2px solid #c95050;
+  }
+  .main_page .testContainer .testContent .theTest .testQuestions .answers li:hover .option_button {
+    background-color: #c95050;
+  }
+}
+@media screen and (min-width: 1259px) and (max-width: 1440px) {
+  .main_page .testContainer .testContent .theTest .testQuestions .answers li:hover .answer {
+    border: 2px solid #c95050;
+  }
+  .main_page .testContainer .testContent .theTest .testQuestions .answers li:hover .option_button {
+    background-color: #c95050;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .main_page .testContainer .testContent .theTest .testQuestions .answers li:hover .answer {
+    border: 2px solid #c95050;
+  }
+  .main_page .testContainer .testContent .theTest .testQuestions .answers li:hover .option_button {
+    background-color: #c95050;
+  }
+}
+.main_page .testContainer .testContent .theTest .testQuestions .answers li span {
+  margin: 0 10px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #c95050;
+}
+.main_page .testContainer .testContent .theTest .testQuestions .answers li h4 {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_page .testContainer .testDone {
+  margin: auto;
+  padding: 10px;
+  box-shadow: 0px 3px 4px #c95050;
+  max-width: 796.86px;
+  margin: 100px auto;
+  background-color: #c95050;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  transition: all 0.2s;
+}
+.main_page .testContainer .testDone:active {
+  top: 5px;
+  box-shadow: 0px 1px 2px #c95050;
+}
+.main_page .testContainer .testDone h3 {
+  color: white;
+}
+.main_page .studentTestsContainer {
+  width: 50%;
+  max-width: 750px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 50px;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .studentTestsContainer {
+    width: 100%;
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 837px) {
+  .main_page .studentTestsContainer {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1257px) {
+  .main_page .studentTestsContainer {
+    width: 100%;
+  }
+}
+.main_page .studentTestsContainer h1 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 900;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .studentTestsContainer h1 {
+    text-align: center;
+  }
+}
+.main_page .studentTestsContainer .testSections .testSection .sortItems {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.main_page .studentTestsContainer .testSections .testSection .sortItems .item {
+  border-bottom: 1px solid #484848;
+  padding: 5px 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin: 1px;
+}
+.main_page .studentTestsContainer .testSections .testSection .tests {
+  margin-top: 40px;
+}
+.main_page .studentTestsContainer .testSections .testSection .tests .test {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 3px 5px #c9c8c8;
+  padding: 20px 50px;
+  cursor: pointer;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .studentTestsContainer .testSections .testSection .tests .test {
+    padding: 25px 20px;
+    display: block;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .main_page .studentTestsContainer .testSections .testSection .tests .test h4 {
+    display: block;
+    margin: 10px 0;
+    font-weight: 700;
+    border-bottom: 1px solid #a8a8a8;
+    padding: 10px 0;
+  }
+}
+.main_page .studentTestsContainer .testSections .testSection .tests .test:hover {
+  opacity: 1;
+  background-color: #fff;
+}
+.main_page .studentTestsContainer .testSections .testSection .tests .test .status {
+  background-color: #16c516;
+  color: white;
+  padding: 3px 20px;
+  font-size: 15px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+}
+.main_page .adminClassContainer {
+  max-width: 50%;
+  max-width: 750px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 50px;
+  display: block;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .adminClassContainer {
+    width: 100%;
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 837px) {
+  .main_page .adminClassContainer {
+    width: 100%;
+  }
+}
+.main_page .adminClassContainer h1 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 900;
+  text-align: center;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .adminClassContainer h1 {
+    text-align: center;
+  }
+}
+.main_page .adminClassContainer .classes_container {
+  margin: auto;
+  margin-top: 40px;
+  text-align: center;
+}
+.main_page .adminClassContainer .classes_container .classes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  position: relative;
+}
+.main_page .adminClassContainer .classes_container .classes .class {
+  cursor: pointer;
+  opacity: 0.9;
+  display: inline-block;
+  padding: 10px;
+  width: 100%;
+}
+.main_page .adminClassContainer .classes_container .classes .class:hover {
+  opacity: 0.7;
+  background-color: #ef3f3f;
+  color: white;
+}
+.main_page .adminClassContainer .classes_container .classes .class .status {
+  background-color: #16c516;
+  color: white;
+  padding: 3px 20px;
+  font-size: 15px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+}
+.main_page .adminClassContainer .classes_container .classes .selected {
+  color: #fff;
+}
+.main_page .adminClassContainer .classes_container .classes .highlight {
+  position: absolute;
+  color: transparent;
+  background-color: #ef3f3f;
+  width: 20%;
+  left: 0%;
+  transition: left 0.7s;
+}
+.main_page .adminClassContainer .testSections .testSection .sortItems {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.main_page .adminClassContainer .testSections .testSection .sortItems .item {
+  border-bottom: 1px solid #484848;
+  padding: 5px 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin: 1px;
+}
+.main_page .adminClassContainer .testSections .testSection .tests {
+  margin-top: 40px;
+}
+.main_page .adminClassContainer .testSections .testSection .tests .test {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 3px 5px #c9c8c8;
+  padding: 20px 50px;
+  cursor: pointer;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .adminClassContainer .testSections .testSection .tests .test {
+    padding: 25px 20px;
+  }
+}
+.main_page .adminClassContainer .testSections .testSection .tests .test:hover {
+  opacity: 1;
+  background-color: #fff;
+}
+.main_page .adminClassContainer .testSections .testSection .tests .test .status {
+  background-color: #16c516;
+  color: white;
+  padding: 3px 20px;
+  font-size: 15px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+}
+.main_page .adminClassContainer .testSections .testSection .tests .addExam {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_page .adminClassContainer .testSections .testSection .tests .addExam span {
+  background-color: #ef5151;
+  color: white;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.main_page .adminClassContainer .testSections .testSection .tests .legend {
+  background: initial;
+  box-shadow: initial;
+  opacity: 1;
+  cursor: initial;
+}
+.main_page .adminClassContainer .testSections .testSection .tests .legend:hover {
+  background-color: initial;
+}
+.main_page .adminClassContainer .testSections .testSection .tests .legend * {
+  min-width: 76.84px;
+}
+.main_page .adminClassContainer .testSections .testSection .tests .legend .status_ {
+  min-width: 76.84px;
+  text-align: center;
+}
+.main_page .testMakerContainer {
+  width: 50%;
+  max-width: 750px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 50px;
+  position: relative;
+}
+@media only screen and (max-width: 700px) {
+  .main_page .testMakerContainer {
+    width: 100%;
+    padding: 20px;
+  }
+}
+.main_page .testMakerContainer .saveChanges {
+  background-color: #000000;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  padding: 15px;
+  cursor: pointer;
+}
+.main_page .testMakerContainer .saveChanges h4 {
+  color: white;
+}
+.main_page .testMakerContainer .testOptions .testTitle {
+  margin-top: 30px;
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 2px solid #e43a3aad;
+}
+.main_page .testMakerContainer .testOptions .testTitle input {
+  height: 60px;
+  font-size: 23px;
+}
+.main_page .testMakerContainer .testOptions .testTitle input::placeholder {
+  color: #222;
+}
+.main_page .testMakerContainer .testOptions .pickClasses .classes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.main_page .testMakerContainer .testOptions .pickClasses .classes .class {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+.main_page .testMakerContainer .testOptions .pickClasses .classes .class span {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  margin: 0 10px;
+  cursor: pointer;
+  border: 1px solid #222;
+}
+.main_page .testMakerContainer .testOptions .classes {
+  width: 100%;
+  margin: 20px 0;
+  text-align: left;
+  text-align: center;
+}
+.main_page .testMakerContainer .testOptions .classes .dropdown {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  text-align: left;
+  background-color: white;
+}
+.main_page .testMakerContainer .testOptions .classes .dropdown span {
+  display: block;
+  padding: 15px 20px;
+  padding-left: 5%;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  border-bottom: 1px solid #e0dddd;
+  cursor: pointer;
+}
+.main_page .testMakerContainer .testOptions .classes .dropdown .dropdown_content {
+  display: block;
+  background-color: #f1f1f1;
+  color: #222;
+  width: 100%;
+  z-index: 9999;
+  text-align: left;
+  cursor: pointer;
+  height: 189px;
+  overflow-y: auto;
+}
+.main_page .testMakerContainer .testOptions .classes .dropdown .dropdown_content .dropdown_item {
+  padding: 20px;
+  padding-left: 5%;
+  background-color: white;
+}
+.main_page .testMakerContainer .testOptions .classes .dropdown .dropdown_content .dropdown_item:hover {
+  background-color: #222222;
+  color: white;
+}
+.main_page .testMakerContainer .testMaker .theTest {
+  margin: auto;
+}
+.main_page .testMakerContainer .testMaker .theTest .addQuestion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.main_page .testMakerContainer .testMaker .theTest .addQuestion h4 {
+  color: #222;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions {
+  margin-top: 50px;
+  border-bottom: 2px solid #c95050;
+  padding-bottom: 20px;
+  transition: all 0.5s;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions:hover {
+  background-color: #e4e4e4;
+  padding: 10px 25px;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions:focus-within {
+  background-color: #e4e4e4;
+  padding: 10px 25px;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions .topStrip {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions .topStrip span {
+  margin: 0 15px;
+  cursor: pointer;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions .topStrip span .fas {
+  color: #8c8c8c;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions .topStrip span .fas:hover {
+  color: #e84646;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions .question {
+  display: flex;
+  align-items: center;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions .question h4 {
+  font-size: 20px;
+  font-weight: 900;
+  margin: 10px 0;
+  background: white;
+  width: 100%;
+  padding-left: 15px;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions .question span {
+  font-size: 15px;
+  margin-right: 10px;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions .answers {
+  display: block;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions .answers .answer {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  padding-left: 10px;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions .answers li {
+  min-width: 300px;
+  margin: 20px 0;
+  padding-left: 12px;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  background-color: #efefef;
+  color: #222;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions .answers li span {
+  cursor: pointer;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions .answers li .option_button {
+  background-color: white;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions .answers li span {
+  margin: 0 10px;
+  min-width: 20px;
+  min-height: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #c95050;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions .answers li h4 {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions .answers .addAnswer {
+  padding: initial;
+  cursor: pointer;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions .answers .addAnswer span {
+  background-color: initial;
+  color: #c95050;
+  font-size: 15px;
+}
+.main_page .testMakerContainer .testMaker .theTest .testQuestions .answers .addAnswer h4 {
+  color: #c95050;
+  font-weight: 900;
+}
+
+.login_page {
+  background-color: #efefef;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_page header {
+  text-align: center;
+  display: block;
+}
+.login_page .inputs {
+  margin: auto;
+  min-width: 300px;
+}
+@media only screen and (max-width: 700px) {
+  .login_page .inputs {
+    min-width: 270px;
+  }
+}
+.login_page .inputs .input {
+  box-shadow: 0px 1px 1px #b2b1b1;
+  background-color: white;
+  margin-top: 20px;
+  text-align: right;
+}
+.login_page .inputs .input input {
+  background-color: initial;
+  border-bottom: initial;
+  width: 95%;
+  padding-left: 5%;
+  margin: initial;
+}
+.login_page .inputs .input input:active {
+  border: initial !important;
+}
+.login_page .inputs .input input:focus-within {
+  border: initial !important;
+}
+.login_page .inputs .input input:hover {
+  border: initial !important;
+}
+.login_page .inputs .classes {
+  width: 100%;
+  margin: 20px 0;
+  text-align: left;
+  text-align: center;
+  box-shadow: 0px 1px 1px #b2b1b1;
+}
+.login_page .inputs .classes .dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+  text-align: left;
+  background-color: white;
+}
+.login_page .inputs .classes .dropdown span {
+  display: block;
+  padding: 15px 20px;
+  padding-left: 5%;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  border-bottom: 1px solid #e0dddd;
+  cursor: pointer;
+}
+.login_page .inputs .classes .dropdown .dropdown_content {
+  display: block;
+  position: absolute;
+  background-color: #f1f1f1;
+  color: #222;
+  width: 100%;
+  z-index: 9999;
+  text-align: left;
+  cursor: pointer;
+  height: 189px;
+  overflow-y: auto;
+}
+.login_page .inputs .classes .dropdown .dropdown_content .dropdown_item {
+  padding: 20px;
+  padding-left: 5%;
+  background-color: white;
+}
+.login_page .inputs .classes .dropdown .dropdown_content .dropdown_item:hover {
+  background-color: #222222;
+  color: white;
+}
+.login_page .inputs .submit_inputs {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 30px;
+}
+@media only screen and (max-width: 700px) {
+  .login_page .inputs .submit_inputs {
+    display: block;
+    text-align: center;
+  }
+  .login_page .inputs .submit_inputs button {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+.login_page .inputs .submit_inputs .signin_button {
+  border-radius: 30px;
+  background-color: red;
+  height: 40px;
+  width: 150px;
+  color: white;
+  box-shadow: 0px 3px 2px #a3a3a3;
+  transition: all 0.7s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_page .inputs .submit_inputs .signin_button .signin {
+  margin: 10px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 900;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  transition: opacity 0.2s;
+}
+.login_page .inputs .submit_inputs h4:hover {
+  text-decoration: underline;
+}
+
+.app {
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */
