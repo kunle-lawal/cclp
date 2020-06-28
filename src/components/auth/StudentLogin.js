@@ -30,13 +30,15 @@ class StudentLogin extends Component {
         // console.log(this.state);
         let firstName = this.state.firstName.trim();
         let lastName = this.state.lastName.trim();
+        firstName = firstName.toLowerCase();
+        lastName = lastName.toLowerCase();
         let username = `${firstName}_${lastName}`;
         let data = {
             email: `${firstName}_${lastName}@cclp.com`,
             password: `${firstName}_${lastName}`,
             class: `class${this.state.pickClass}`,
-            firstName: firstName.toLowerCase(),
-            lastName: lastName.toLowerCase(),
+            firstName: firstName,
+            lastName: lastName,
             loginAttempts: this.state.loginAttempts,
             type: 'student',
             username: username

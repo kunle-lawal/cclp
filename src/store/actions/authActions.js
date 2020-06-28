@@ -65,23 +65,36 @@ export const signOut = (authInfo) => {
     }
 }
 
-export const dataEntry = (authInfo) => {
-    return (dispatch, getState, { getFirebase, getFirestore }) => {
+export const updatePasswords = (newPassword) => {
+    return (dispatch, getState, {getFirebase, getFirestore}) => {
         const firebase = getFirebase();
         const firestore = getFirestore();
-        const username = `${authInfo.firstName}_${authInfo.lastName}`;
-
-        console.log(authInfo);
-
-        firestore.collection('class').doc(authInfo.class).collection('students').doc(username).set({
-            first_name: authInfo.firstName,
-            last_name: authInfo.lastName,
-            class: authInfo.class,
-            type: 'student'
-        }, { merge: true })
-            
+        const auth = firebase.auth();
+        const user = firebase.auth().currentUser;
+        console.log(newPassword);
+        user.updatePassword(newPassword).then(() => {
+            console.log(`${user} password reset`)
+        })
     }
 }
+
+// export const dataEntry = (authInfo) => {
+//     return (dispatch, getState, { getFirebase, getFirestore }) => {
+//         const firebase = getFirebase();
+//         const firestore = getFirestore();
+//         const username = `${authInfo.firstName}_${authInfo.lastName}`;
+
+//         console.log(authInfo);
+
+//         firestore.collection('class').doc(authInfo.class).collection('students').doc(username).set({
+//             first_name: authInfo.firstName,
+//             last_name: authInfo.lastName,
+//             class: authInfo.class,
+//             type: 'student'
+//         }, { merge: true })
+            
+//     }
+// }
 
 
 // export const signIn = (authInfo, type) => {

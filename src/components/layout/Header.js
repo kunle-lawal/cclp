@@ -3,8 +3,14 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
 import { signOut } from '../../store/actions/authActions'
+import { updatePasswords } from '../../store/actions/authActions'
 
 class Header extends Component {
+    changePassword = () => {
+        let first = this.props.profile.first_name.toLowerCase();
+        let last = this.props.profile.last_name.toLowerCase();
+        this.props.updatePasswords(`${first}_${last}`);
+    }
     render() {
         let {profile} = this.props;
         return (
@@ -40,6 +46,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         signOut: (testData, totalClasses) => dispatch(signOut(testData, totalClasses)),
+        updatePasswords: (newPass) => dispatch(updatePasswords(newPass))
     }
 }
 
