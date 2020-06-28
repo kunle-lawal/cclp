@@ -58,7 +58,7 @@ let Tests = (props) => {
                     <div className="test" id={index}>
                         <h4 className="title">{test.theme}</h4>
                         <h4 className="date">
-                            June, 1st 2020
+                            July, 6st 2020
                         </h4>
                         <h4 className="grade">{!props.studentsTests ? 'Still Grading' : (grade) ? `${props.studentsTests[test.id].grade * 10}%` : 'Still Grading'}</h4>
                         <h4 className="status" style={
