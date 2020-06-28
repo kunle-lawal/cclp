@@ -41,7 +41,7 @@ class StudentDashboard extends Component {
 }
 
 let Tests = (props) => {
-    // console.log(props);
+    console.log(props);
     return (
         !props.tests ? 
             <div className="test">
@@ -51,6 +51,8 @@ let Tests = (props) => {
                 <h4 className="status"></h4>
             </div>
          : props.tests.map((test, index) => {
+             let grade = props.studentsTests[test.id] ? props.studentsTests[test.id].grade : false;
+             let completed = props.studentsTests[test.id] ? props.studentsTests[test.id].completed : false;
             return (
                 <Link key={index} to={`test/${props.class}_${test.id}`}>
                     <div className="test" id={index}>
@@ -58,10 +60,10 @@ let Tests = (props) => {
                         <h4 className="date">
                             June, 1st 2020
                         </h4>
-                        <h4 className="grade">{!props.studentsTests ? 'Still Grading' : props.studentsTests[test.id].grade ? `${props.studentsTests[test.id].grade * 10}%` : 'Still Grading'}</h4>
+                        <h4 className="grade">{!props.studentsTests ? 'Still Grading' : (grade) ? `${props.studentsTests[test.id].grade * 10}%` : 'Still Grading'}</h4>
                         <h4 className="status" style={
-                            !props.studentsTests ? {} : (props.studentsTests[test.id].completed) ? { 'backgroundColor': '#16c516' } : { 'backgroundColor': '#F44336'}
-                        }>{!props.studentsTests ? '' : (props.studentsTests[test.id].completed) ? 'Done' : 'Not Done'}</h4>
+                            !props.studentsTests ? {} : (completed) ? { 'backgroundColor': '#16c516' } : { 'backgroundColor': '#F44336'}
+                        }>{!props.studentsTests ? '' : (completed) ? 'Done' : 'Not Done'}</h4>
                     </div>
                 </Link>
             )

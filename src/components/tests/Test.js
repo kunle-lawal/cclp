@@ -21,7 +21,6 @@ class Test extends Component {
             }) 
             return 0;
         }
-        console.log(this.state);
         let completed = this.isCompleted();
         let firstName = this.props.profile.first_name;
         let lastName = this.props.profile.last_name;
@@ -68,7 +67,7 @@ class Test extends Component {
     componentDidMount() {
         let testAnswers = [];
         window.setTimeout(() => {
-            testAnswers = this.props.profile.tests ? this.props.profile.tests[this.props.testUID].answers : false
+            testAnswers = this.props.profile.tests ? (this.props.profile.tests[this.props.testUID] ? this.props.profile.tests[this.props.testUID].answers : false) : false
             // console.log(this.props.profile.tests ? this.props.profile.tests[this.props.testUID].answers : false);
             if (testAnswers === false) { return }
             this.setState({
@@ -80,7 +79,6 @@ class Test extends Component {
 
     render() {
         const { auth, test, profile } = this.props;
-        console.log(this.props);
         if (!auth.uid) return <Redirect to='/login/student' />
         return (
             <div className="main_page">
@@ -109,7 +107,7 @@ class Test extends Component {
                                             index={index}
                                             data={questionData}
                                             getAnswerData={this.getAnswerData}
-                                            testAnswers={profile.tests ? profile.tests[this.props.testUID].answers[index] : false}
+                                            testAnswers={profile.tests ? (profile.tests[this.props.testUID] ? profile.tests[this.props.testUID].answers[index] : false) : false}
                                             testDue={this.testDue}
                                         />
                                     )
@@ -119,7 +117,7 @@ class Test extends Component {
                     </div>
                     
                     {
-                        (this.state.submitCheck > 1 || this.testDue) ? null : <div className="center testDone" onClick={this.submitTest}><h3>{this.state.submitCheck > 0 ? 'Are you sure?' : 'I am done with my test'}</h3></div>
+                        (this.state.submitCheck > 1 || this.testDue()) ? null : <div className="center testDone" onClick={this.submitTest}><h3>{this.state.submitCheck > 0 ? 'Are you sure?' : 'I am done with my test'}</h3></div>
                     }
                 
                 </div>

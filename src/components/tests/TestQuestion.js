@@ -7,7 +7,7 @@ class TestQuestion extends Component {
     }
 
     handleInput = (e) => {
-        if (this.props.testDue) { return 0 }
+        if (this.props.testDue()) { return 0 }
         let answer = this.state.answer;
         answer[0] = e.target.value;
         this.setState({
@@ -18,7 +18,8 @@ class TestQuestion extends Component {
     }
 
     inputText = () => {
-        if (this.props.testDue) { return 0 }
+        console.log('hello');
+        if (this.props.testDue()) { return 0 }
         let answer = this.state.answer;
         answer[0] = this.state.textInput
         this.setState({
@@ -28,7 +29,7 @@ class TestQuestion extends Component {
     }
 
     pickAnswer = (e) => {
-        if (this.props.testDue) {return 0}
+        if (this.props.testDue()) {return 0}
         let alphabet = ['A', 'B', 'C', 'D'];
         let answer = this.state.answer;
         if (answer.includes(alphabet[e.target.id])) {

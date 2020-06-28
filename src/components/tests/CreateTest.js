@@ -21,7 +21,7 @@ class CreateTest extends Component {
     }
 
     createTest = () => {
-        let data = {
+        let data = { 
             questions: this.state.questions,
             testAnswers: this.state.answers,
             testTheme: this.state.theme,
