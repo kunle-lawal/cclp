@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import Moment from 'moment';
 
 import Header from './layout/Header'
+import TimePosted from './miniComponents/TimePosted'
 
 class StudentDashboard extends Component {
    render() {
@@ -41,7 +42,6 @@ class StudentDashboard extends Component {
 }
 
 let Tests = (props) => {
-    console.log(props);
     return (
         !props.tests ? 
             <div className="test">
@@ -57,10 +57,7 @@ let Tests = (props) => {
                 <Link key={index} to={`test/${props.class}_${test.id}`}>
                     <div className="test" id={index}>
                         <h4 className="title">{test.theme}</h4>
-                        <h4 className="date">
-                            July, 6st 2020
-                        </h4>
-                        <h4 className="grade">{!props.studentsTests ? 'Still Grading' : (grade) ? `${props.studentsTests[test.id].grade * 10}%` : 'Still Grading'}</h4>
+                        <h4 className="grade">{!props.studentsTests ? 'Still Grading' : (grade) ? `${props.studentsTests[test.id].grade * 10}%` : 'Not Grading yet'}</h4>
                         <h4 className="status" style={
                             !props.studentsTests ? {} : (completed) ? { 'backgroundColor': '#16c516' } : { 'backgroundColor': '#F44336'}
                         }>{!props.studentsTests ? '' : (completed) ? 'Done' : 'Not Done'}</h4>
@@ -74,7 +71,7 @@ let Tests = (props) => {
 let GhostTest = () => {
     return (
         <div className="test" id='ghostTest' style={{ 'textAlign': 'center', 'justifyContent': 'center', 'backgroundColor': '#cecece75', 'boxShadow': 'initial', 'cursor': 'initial'}}>
-            <h4 className="center">Next Test June 28th, 2020</h4>
+            <h4 className="center">Next Test Aug, 2020</h4>
         </div>
     )
 }
