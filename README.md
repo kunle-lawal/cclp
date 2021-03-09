@@ -1,4 +1,5 @@
 https://learningplatform-cedd8.web.app/
+Admin: https://learningplatform-cedd8.web.app/admin
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
